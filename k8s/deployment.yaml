@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alertops-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: alertops
+  template:
+    metadata:
+      labels:
+        app: alertops
+    spec:
+      containers:
+        - name: alertops
+          image: alertops
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
