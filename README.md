@@ -132,7 +132,7 @@ kubectl scale deployment alertops-deployment --replicas=4
 Ajit Mishra  
 Backend & DevOps Enthusiast
 
-GitHub: https://github.com/YOUR-USERNAME
+GitHub: https://github.com/ajitmishra0110
 
 ---
 
