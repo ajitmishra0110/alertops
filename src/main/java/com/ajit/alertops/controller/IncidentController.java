@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -37,4 +38,10 @@ public class IncidentController {
         data.put("alert", service.highSeverityCount() > 3 ? "SYSTEM UNSTABLE" : "SYSTEM OK");
         return data;
     }
+
+    @GetMapping("/incidents")
+    public List<Incident> getAll() {
+        return service.getAll();
+    }
+
 }
